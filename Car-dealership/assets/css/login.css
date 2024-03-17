@@ -1,0 +1,62 @@
+/* General Styles */
+body {
+  background-color: #fff;
+  font-family: 'Roboto', sans-serif;
+  display: flex; /* Added for Flexbox */
+  justify-content: center; /* Added for Flexbox: centers horizontally */
+  align-items: center; /* Added for Flexbox: centers vertically */
+  min-height: 100vh; /* Ensures content fills viewport height */
+}
+
+/* Half section styling (optional) */
+.half .bg {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Login form container */
+.contents .container {
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+/* Login form heading */
+.contents .text-center h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Login form elements */
+.contents form .form-control {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+/* Remember me checkbox */
+.contents form .control--checkbox {
+  color: #333;
+}
+
+/* Forgot password link */
+.contents form .forgot-pass {
+  color: #333;
+}
+
+/* Login button */
+.contents form .btn-primary {
+  background-color: #f08000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.contents form .btn-primary:hover {
+  background-color: #e07000;
+}
