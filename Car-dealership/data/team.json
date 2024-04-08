@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name":"Tarik Perviz",
+        "role":"CEO",
+        "image":"assets/images/team-image-1-646x680.jpg",
+        "facebook":"https://facebook.com",
+        "twitter":"https://twitter.com",
+        "linkedin":"https://linkedin.com",
+        "behance":"https://behance.com"
+
+    },
+    {
+        "id": 2,
+        "name":"Hajrudina Pero",
+        "role":"CTO",
+        "image":"assets/images/team-image-2-646x680.jpg",
+        "facebook":"https://facebook.com",
+        "twitter":"https://twitter.com",
+        "linkedin":"https://linkedin.com",
+        "behance":"https://behance.com"
+
+    },
+    {
+        "id": 3,
+        "name":"Haruna Torlak",
+        "role":"Customer Support",
+        "image":"assets/images/team-image-3-646x680.jpg",
+        "facebook":"https://facebook.com",
+        "twitter":"https://twitter.com",
+        "linkedin":"https://linkedin.com",
+        "behance":"https://behance.com"
+
+    },
+    {
+        "id": 4,
+        "name":"Emir Sultan",
+        "role":"Customer Support",
+        "image":"assets/images/team-image-4-646x680.jpg",
+        "facebook":"https://facebook.com",
+        "twitter":"https://twitter.com",
+        "linkedin":"https://linkedin.com",
+        "behance":"https://behance.com"
+
+    }
+]

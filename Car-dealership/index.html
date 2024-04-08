@@ -14,8 +14,9 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
+    <link rel="stylesheet" href="assets/css/spapp.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    
 
     </head>
     
@@ -46,19 +47,19 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="cars.html">Cars</a></li>
+                            <li><a href="#home" onclick="loadCars()" class="active">Home</a></li>
+                            <li><a href="#cars" onclick="loadCars()">Cars</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="about.html">About Us</a>
-                                    <a class="dropdown-item" href="team.html">Team</a>
+                                    <a class="dropdown-item" href="#about">About Us</a>
+                                    <a class="dropdown-item" onclick="loadTeam()" href="#team">Team</a>
                                     
                                     
                                 </div>
                             </li>
-                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                             <li><a href="login.html">Login</a></li>
                         </ul>        
                         <a class='menu-trigger'>
@@ -73,144 +74,30 @@
     <!-- ***** Header Area End ***** -->
 
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="main-banner" id="top">
-        <video autoplay muted loop id="bg-video">
-            <source src="assets/images/video.mp4" type="video/mp4" />
-        </video>
+    <main id="spapp" role="main">
+        <section id="home" data-load="home.html">    
+        </section>
 
-        <div class="video-overlay header-text">
-            <div class="caption">
-                <h6>Tarik Perviz Project</h6>
-                <h2>IBU <em>car dealership</em> Project!</h2>
-                
-            </div>
-        </div>
-    </div>
-    <!-- ***** Main Banner Area End ***** -->
+        <section id="cars" data-load="cars.html">
+        </section>
 
-   <!-- ***** Cars Starts ***** -->
-    <section class="section" id="trainers">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Featured <em>Cars</em></h2>
-                        <img src="assets/images/line-dec.png" alt="">
-                        <p>We offer a vide variety of cars</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-1-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>12000 </del> &nbsp; <sup>$</sup>10000
-                            </span>
+        <section id="about" data-load="about.html">
+        </section>
 
-                            <h4>Dacia Sandero Stepway</h4>
+        <section id="contact" data-load="contact.html">
+        </section>
 
-                            <p>
-                                <i class="fa fa-dashboard"></i> 130 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1500 cc <br>
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
+        <section id="team" data-load="team.html">
+        </section>
 
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-2-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>20000 </del> &nbsp; <sup>$</sup>18000
-                            </span>
+        <section id="car-details" data-load="car-details.html">
+        </section>
 
-                            <h4>BMW Z8</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 13 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 4900 cc <br>
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="trainer-item">
-                        <div class="image-thumb">
-                            <img src="assets/images/product-3-720x480.jpg" alt="">
-                        </div>
-                        <div class="down-content">
-                            <span>
-                                <del><sup>$</sup>25000 </del> &nbsp; <sup>$</sup>22000
-                            </span>
-
-                            <h4>Mazda CX-5</h4>
-
-                            <p>
-                                <i class="fa fa-dashboard"></i> 200 000km &nbsp;&nbsp;&nbsp;
-                                <i class="fa fa-cube"></i> 1600 cc <br>
-                                <i class="fa fa-cog"></i> Manual &nbsp;&nbsp;&nbsp;
-                            </p>
-
-                            <ul class="social-icons">
-                                <li><a href="car-details.html">+ View Car</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <br>
-
-            <div class="main-button text-center">
-                <a href="cars.html">View Cars</a>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Cars Ends ***** -->
+        
+    
+    </main>
 
     
-
-    <!-- ***** Blog Start ***** -->
-    
-    <!-- ***** Blog End ***** -->
-
-    <!-- ***** Call to Action Start ***** -->
-    <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <div class="cta-content">
-                        <h2>Send us a <em>message</em></h2>
-                        <p>Feal free to ask us anything, we will respond within 3 hours</p>
-                        <div class="main-button">
-                            <a href="contact.html">Contact us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** Call to Action End ***** -->
-
-    <!-- ***** Testimonials Item Start ***** -->
-    
-    <!-- ***** Testimonials Item End ***** -->
     
     <!-- ***** Footer Start ***** -->
     <footer>
@@ -228,6 +115,8 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
+    
+
 
     <!-- Bootstrap -->
     <script src="assets/js/popper.js"></script>
@@ -243,6 +132,22 @@
     
     <!-- Global Init -->
     <script src="assets/js/custom.js"></script>
+
+
+    
+    <script src="assets/js/jquery.spapp.min.js"></script>
+
+    <script>
+        var app = $.spapp({
+            defaultView: "#home",
+            templateDir: "./views/"
+        });
+        app.run();
+    </script>
+
+    <script src="assets/js/ajax/datarequest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+	<script src="assets/js/forms/form.js"></script>
 
   </body>
 </html>
