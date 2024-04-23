@@ -1,3 +1,4 @@
+
 <section class="section section-bg" id="call-to-action" style="background-image: url(assets/images/banner-image-1-1920x500.jpg)">
     <div class="container">
         <div class="row">
@@ -30,7 +31,7 @@
                     <i class="fa fa-phone"></i>
                 </div>
 
-                <h5><a href="#">+387 61 225 522</a></h5>
+                <h5><a href="">+387 61 225 522</a></h5>
 
                 <br>
             </div>
@@ -40,7 +41,7 @@
                     <i class="fa fa-envelope"></i>
                 </div>
 
-                <h5><a href="#">tarik.perviz@stu.ibu.edu.ba</a></h5>
+                <h5><a href="https://mail.google.com/">tarik.perviz@stu.ibu.edu.ba</a></h5>
 
                 <br>
             </div>
@@ -50,7 +51,7 @@
                     <i class="fa fa-map-marker"></i>
                 </div>
 
-                <h5><a href="#">Francuske revolucije bb</a></h5>
+                <h5><a href="https://www.google.com/maps/place/International+Burch+University/@43.8186319,18.3094897,17z/data=!3m1!4b1!4m6!3m5!1s0x4758ca0f99d6bf3b:0x6f97362d8c61c461!8m2!3d43.8186281!4d18.31207!16s%2Fm%2F0ch3scj?entry=ttu">Francuske revolucije bb</a></h5>
 
                 <br>
             </div>
@@ -65,37 +66,35 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div id="map">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.8381448517366!2d18.314697021011497!3d43.81879855968285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758ca0f99d6bf3b%3A0x6f97362d8c61c461!2sInternational%20Burch%20University!5e0!3m2!1sen!2sba!4v1709755411976!5m2!1sen!2sba" width="100%" height="600px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3107.8381448517366!2d18.314697021011497!3d43.81879855968285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758ca0f99d6bf3b%3A0x6f97362d8c61c461!2sInternational%20Burch%20University!5e0!3m2!1sen!2sba!4v1709755411976!5m2!1sen!2sba" width="100%" height="681.96px" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-xs-12">
                 <div class="contact-form section-bg" style="background-image: url(assets/images/contact-1-720x480.jpg)">
-                    <form id="contact-form" method="post">
+                    <form class="contact-form" id="contact-form" method="post">
                       <div class="row">
                         <div class="col-md-6 col-sm-12">
-                          <fieldset>
-                            <input name="name" type="text" id="name" placeholder="Your Name*" required minLength="5">
-                          </fieldset>
+                          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
                         </div>
                         <div class="col-md-6 col-sm-12">
-                          <fieldset>
-                            <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email*" required>
-                          </fieldset>
+                  
+                            <input type="text" class="form-control"  id="email" name="email" placeholder="Your Email*">
+                          
                         </div>
                         <div class="col-md-12 col-sm-12">
-                          <fieldset>
-                            <input name="subject" type="text" id="subject" placeholder="Subject" required>
-                          </fieldset>
+                          
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                          
                         </div>
                         <div class="col-lg-12">
-                          <fieldset>
-                            <textarea name="message" rows="6" id="message" placeholder="Message" required></textarea>
-                          </fieldset>
+                          
+                            <textarea class="form-control" name="message" rows="6" id="message" placeholder="Message"></textarea>
+                          
                         </div>
-                        <div class="col-lg-12">
-                          <fieldset>
-                            <button type="submit" id="form-submit" class="main-button">Send Message</button>
-                          </fieldset>
+                        <div class="col-lg-12 form-group">
+                          
+                            <button type="submit"  class="form-control btn btn-primary rounded submit px-3">Send Message</button>
+                          
                         </div>
                       </div>
                     </form>
@@ -104,3 +103,17 @@
         </div>
     </div>
 </section>
+
+
+<script>
+    FormValidation.validate("#contact-form",
+		{},
+		function(data){
+			console.log("Data from form is serialized into",data);
+		}
+	);
+</script>
+
+
+
+
