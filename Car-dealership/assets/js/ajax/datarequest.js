@@ -193,7 +193,7 @@ $(document).on("click", ".car-description", function(){
                 console.log("Car not found")
             }
         }
-    )}, 0);
+    )}, 20);
 })
 // Function to call loadCars based on the specific section
 function loadCarsIfApplicable() {
