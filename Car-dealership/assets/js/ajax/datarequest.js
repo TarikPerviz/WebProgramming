@@ -24,6 +24,8 @@
         })
         .catch(error => console.error('Error loading cars:', error));
     }
+
+
     function loadTeam() {
         fetch('data/team.json')
         .then(response => response.json())
@@ -193,4 +195,56 @@ $(document).on("click", ".car-description", function(){
         }
     )}, 20);
 })
+// Function to call loadCars based on the specific section
+function loadCarsIfApplicable() {
+    const hash = window.location.hash;
+    const carsContainer = document.querySelector('#cars-container');
+    if ((hash === '#home' || hash === '#cars') && carsContainer) {
+        loadCars();
+        observer.disconnect(); // Disconnect observer after loading cars to prevent retriggering
+    }
+}
+
+function loadTeamIfApplicable() {
+    const hash = window.location.hash;
+    const teamContainer = document.querySelector('#team-population'); // Ensure this selector matches your actual DOM
+    if (hash === '#team' && teamContainer) {
+        loadTeam();
+        observer.disconnect(); // Disconnect observer after loading team to prevent retriggering
+    }
+}
+
+// Setup a function to initialize the observer
+function setupObserver() {
+    // Disconnect existing observer instance if already observing
+    observer.disconnect();
+
+    // Observe changes in the DOM
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+}
+
+// Create a single MutationObserver instance
+const observer = new MutationObserver((mutations) => {
+    loadCarsIfApplicable();
+    loadTeamIfApplicable();
+});
+
+// Event listeners to setup observer and handle initial loading
+document.addEventListener('DOMContentLoaded', () => {
+    loadCarsIfApplicable();
+    loadTeamIfApplicable();
+    setupObserver();
+});
+window.addEventListener('hashchange', () => {
+    loadCarsIfApplicable();
+    loadTeamIfApplicable();
+    setupObserver();
+});
+
+
+
+
 

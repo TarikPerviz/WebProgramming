@@ -43,18 +43,18 @@
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">Car Dealership<em> Tarik</em></a>
+                        <a href="#home" class="logo">Car Dealership<em> Tarik</em></a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="#home" onclick="loadCars()" class="active">Home</a></li>
-                            <li><a href="#cars" onclick="loadCars()">Cars</a></li>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#cars">Cars</a></li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">About</a>
                               
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="#about">About Us</a>
-                                    <a class="dropdown-item" onclick="loadTeam()" href="#team">Team</a>
+                                    <a class="dropdown-item" href="#team">Team</a>
                                     
                                     
                                 </div>
@@ -115,14 +115,19 @@
 
     <!-- jQuery -->
     <script src="assets/js/jquery-2.1.0.min.js"></script>
+    <script src="assets/js/jquery.spapp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     
 
 
     <!-- Bootstrap -->
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    
 
     <!-- Plugins -->
+    
+    
     <script src="assets/js/scrollreveal.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
@@ -135,19 +140,17 @@
 
 
     
-    <script src="assets/js/jquery.spapp.min.js"></script>
-
+    
+    <script src="utils/utils.js"></script>
+    <script src="utils/form_validation.js"></script>
     <script>
-        var app = $.spapp({
-            defaultView: "#home",
-            templateDir: "./views/"
-        });
-        app.run();
+        Utils.init_spapp();
     </script>
-
+    
+    
     <script src="assets/js/ajax/datarequest.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
-	<script src="assets/js/forms/form.js"></script>
+    
+
 
   </body>
 </html>
