@@ -74,21 +74,21 @@
                     <form class="contact-form" id="contact-form" method="post">
                       <div class="row">
                         <div class="col-md-6 col-sm-12">
-                          <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+                          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="true">
                         </div>
                         <div class="col-md-6 col-sm-12">
                   
-                            <input type="text" class="form-control"  id="email" name="email" placeholder="Your Email*">
+                            <input type="email" class="form-control"  id="email" name="email" placeholder="Your Email" required="true">
                           
                         </div>
                         <div class="col-md-12 col-sm-12">
                           
-                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="true">
                           
                         </div>
                         <div class="col-lg-12">
                           
-                            <textarea class="form-control" name="message" rows="6" id="message" placeholder="Message"></textarea>
+                            <textarea class="form-control" name="message" rows="6" id="message" placeholder="Message" required="true"></textarea>
                           
                         </div>
                         <div class="col-lg-12 form-group">
@@ -109,7 +109,13 @@
     FormValidation.validate("#contact-form",
 		{},
 		function(data){
-			console.log("Data from form is serialized into",data);
+			$.post(Constants.API_BASE_URL + "add_contact.php", data)
+			.done(function(data){
+				toastr.success("Question sent!");
+			}).fail(function(xhr, textStatus, errorThrown) {
+            
+            toastr.error("Error: " + errorThrown); 
+        	});
 		}
 	);
 </script>
