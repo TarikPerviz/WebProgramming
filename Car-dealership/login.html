@@ -60,11 +60,11 @@
 				 <form class="signin-form" id="signin-form" method="post">
 			      		<div class="form-group mb-3">
 			      			<label class="label" for="name">Username</label>
-			      			<input type="text" class="form-control" id="username" name="username" placeholder="Username">
+			      			<input type="text" class="form-control" id="username" name="username" placeholder="Username" required="true">
 			      		</div>
 		            <div class="form-group mb-3">
 		            	<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+		              <input type="password" class="form-control" id="password" name="password" placeholder="Password" required="true">
 		            </div>
 		            <div class="form-group">
 		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign In</button>
@@ -133,15 +133,15 @@
         
           <div class="mb-3">
             <label for="username" class="col-form-label">Username</label>
-            <input type="text" class="form-control" name="username" id="new_username">
+            <input type="text" class="form-control" name="username" id="new_username" required="true">
           </div>
 		  <div class="mb-3">
             <label for="password" class="col-form-label">Password</label>
-            <input type="text" class="form-control" name="password" id="new_password">
+            <input type="text" class="form-control" name="password" id="new_password" required="true">
           </div>
 		  <div class="mb-3">	
             <label for="email" class="col-form-label">email</label>  
-			<input type="text" class="form-control"  id="email" name="email">
+			<input type="email" class="form-control"  id="email" name="email" required="true">
           </div>
       </div>
       <div class="modal-footer">
@@ -180,8 +180,11 @@
 			$.post(Constants.API_BASE_URL + "add_user.php", data)
 			.done(function(data){
 				$("#add-user-modal").modal("toggle");
-				toastr.error(error);
-			});
+				toastr.success("User added successfully!");
+			}).fail(function(xhr, textStatus, errorThrown) {
+            
+            toastr.error("Error: " + errorThrown); 
+        	});
 		}
 	);
 	</script>
