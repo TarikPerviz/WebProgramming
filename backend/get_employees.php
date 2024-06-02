@@ -2,10 +2,10 @@
 header('Access-Control-Allow-Origin: http://localhost');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Origin, Authorization');
-require_once __DIR__ . '/rest/services/CarService.class.php';
+require_once __DIR__ . '/rest/services/EmployeeService.class.php';
 
-$car_service = new CarService();
-$data = $car_service->get_cars();
+$employee_service = new EmployeeService();
+$data = $employee_service->get_employees();
 
 echo json_encode($data);
 ?>

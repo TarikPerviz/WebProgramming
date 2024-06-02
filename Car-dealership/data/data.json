@@ -16,7 +16,7 @@
       "seats": "4",
       "doors": "2/3",
       "color": "Silver",
-      "featuredCar": true,
+      "featured":true,
       "name": "Tarik Perviz",
       "phone": "061-205-202",
       "mail": "tarik.perviz@stu.ibu.edu.ba"
@@ -38,7 +38,7 @@
       "seats": "5",
       "doors": "4/5",
       "color": "Black",
-      "featuredCar": true,
+      "featured":true,
       "name": "John Doe",
       "phone": "061-123-456",
       "mail": "johndoe@example.com"
@@ -60,7 +60,7 @@
       "seats": "5",
       "doors": "4/5",
       "color": "Red",
-      "featuredCar": true,
+      "featured":true,
       "name": "Jane Smith",
       "phone": "062-789-123",
       "mail": "janesmith@example.com"
@@ -82,7 +82,7 @@
       "seats": "4",
       "doors": "2/3",
       "color": "Blue",
-      "featuredCar": true,
+      "featured":false,
       "name": "Mike Johnson",
       "phone": "063-456-789",
       "mail": "mikejohnson@example.com"
@@ -104,7 +104,7 @@
       "seats": "5",
       "doors": "4/5",
       "color": "White",
-      "featuredCar": true,
+      "featured":false,
       "name": "Emma Wilson",
       "phone": "064-321-654",
       "mail": "emmawilson@example.com"
@@ -126,7 +126,7 @@
       "seats": "5",
       "doors": "4/5",
       "color": "Grey",
-      "featuredCar": true,
+      "featured":false,
       "name": "Alex Turner",
       "phone": "065-987-321",
       "mail": "alexturner@example.com"
