@@ -1,19 +1,14 @@
 let CarServiceAjax = {
     loadCars: function() {
-        RestClient.get('get_cars.php', function(response) {
+        RestClient.get('cars', function(response) {
+            
             let data;
-            try {
-                data = JSON.parse(response);
-            } catch (e) {
-                console.error("Failed to parse JSON response:", e);
-                return;
-            }
-
+            data = response;
             const carsContainer = document.getElementById('cars-container');
             carsContainer.innerHTML = '';
 
-            if (Array.isArray(data.data)) { // Adjusted to access the data key
-                data.data.forEach(car => { // Adjusted to access the data key
+            if (Array.isArray(data.data)) {
+                data.data.forEach(car => {
                     const carHtml = `
                     <div class="col-lg-4 col-md-6 mb-4 car-description" id="${car.id}">
                         <div class="card h-100">
@@ -34,17 +29,14 @@ let CarServiceAjax = {
         });
     },
     loadCarDetails: function(carID) {
-        RestClient.get('get_cars.php', function(response) {
+        RestClient.get('cars', function(response) {
+            
             let data;
-            try {
-                data = JSON.parse(response);
-            } catch (e) {
-                console.error("Failed to parse JSON response:", e);
-                return;
-            }
-
-            const selectedCar = data.data.find(car => car.id === parseInt(carID)); // Adjusted to access the data key
+            data = response;
                 
+
+            const selectedCar = data.data.find(car => car.id === parseInt(carID));
+
             if (selectedCar) {
                 $(".cta-content").html(
                     `
