@@ -177,7 +177,7 @@
 		function(data){
 			$('#add-user-modal button[type="cancel"]').trigger("click");
 
-			$.post(Constants.API_BASE_URL + "add_user.php", data)
+			$.post(Constants.API_BASE_URL + "users/add", data)
 			.done(function(data){
 				$("#add-user-modal").modal("toggle");
 				toastr.success("User added successfully!");

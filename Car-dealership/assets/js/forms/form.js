@@ -35,7 +35,7 @@ function apiFormHandler(form, event) {
     let data = serializeForm(form);
   
     $.post(
-      "http://localhost:80/WebProgramming/Car-dealership/", //connection refused
+      "http://localhost:80/WebProgramming/Car-dealership/", 
       JSON.stringify(data)
     ).done(function (data) {
       $("#signin-form")[0].reset();
