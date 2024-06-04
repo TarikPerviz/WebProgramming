@@ -1,4 +1,10 @@
+
 var Constants = {
-    API_BASE_URL: 'http://localhost/WebProgramming/backend/',
-    PRO_BASE_URL: 'https://localhost:80/WebProgramming/Car-dealership/',
-}
+    get_api_base_url: function () {
+      if(location.hostname == 'localhost'){
+        return "http://localhost/WebProgramming/backend/";
+      } else {
+        return "https://urchin-app-sr3f6.ondigitalocean.app/live-backend/";
+      }
+    }
+  };
