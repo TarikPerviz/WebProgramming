@@ -1,5 +1,7 @@
 <?php
-
+header('Access-Control-Allow-Origin: https://octopus-app-aicvb.ondigitalocean.app');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
+header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Origin, Authorization');
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
