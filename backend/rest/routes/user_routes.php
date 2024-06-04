@@ -1,7 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: https://octopus-app-aicvb.ondigitalocean.app');
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept, Origin, Authorization');
+
 require_once __DIR__ . '/../services/UserService.class.php';
 
 Flight::set('user_service', new UserService());
