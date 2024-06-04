@@ -7,7 +7,7 @@ error_reporting(E_ALL ^ (E_NOTICE | E_DEPRECATED));
 
 class Config {
     public static function DB_NAME() {
-        return Config::get_env("DB_NAME", "web-live-coding");
+        return Config::get_env("DB_NAME", "cardealership");
     }
     public static function DB_PORT() {
         return Config::get_env("DB_PORT", 3306);
