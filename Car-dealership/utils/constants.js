@@ -4,7 +4,7 @@ var Constants = {
       if(location.hostname == 'localhost'){
         return "http://localhost/WebProgramming/backend/";
       } else {
-        return "https://urchin-app-sr3f6.ondigitalocean.app/live-backend/";
+        return "https://octopus-app-aicvb.ondigitalocean.app/backend/";
       }
     }
   };
