@@ -44,7 +44,7 @@ Flight::group('/auth', function(){
 
         $token = JWT::encode(
             $jwt_payload,
-            JWT_SECRET,
+            Config::JWT_SECRET(),
             'HS256'
 
         );
@@ -65,7 +65,7 @@ Flight::group('/auth', function(){
      *      @OA\Response(
      *           response=200,
      *           description="Success response or exception if unable to verify jwt token"
-     *      ),
+     *      )
      * )
      */
     Flight::route('POST /logout', function() {

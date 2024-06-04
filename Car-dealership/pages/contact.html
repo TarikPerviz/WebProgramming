@@ -149,7 +149,7 @@
 
 <script>
   FormValidation.validate("#contact-form", {}, function (data) {
-    $.post(Constants.API_BASE_URL + "contacts/add", data)
+    $.post(Constants.get_api_base_url() + "contacts/add", data)
       .done(function (data) {
         toastr.success("Question sent!");
       })

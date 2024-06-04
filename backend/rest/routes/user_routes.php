@@ -30,5 +30,41 @@ Flight::group('/users', function(){
         $user=Flight::get('user_service')->add_user($payload);
         Flight::json(['message'=>"You succesfully added the user",'data'=>$user]);
     });
+    /**
+     * @OA\Get(
+     *      path="/users/user",
+     *      tags={"users"},
+     *      summary="Get user by ID",
+     *      @OA\Response(
+     *           response=200,
+     *           description="Get patient by ID"
+     *      ),
+     *      @OA\Parameter(@OA\Schema(type="number"), in="query", name="user_id", example="1", description="User ID")
+     * )
+     */
+    Flight::route('GET /user', function () {
+        $body = Flight::request()->query;
+
+        $user_service = new UserService();
+        $user = $user_service->get_user_by_id($body['user_id']);
+        Flight::json($user, 200);
+    });
+     /**
+     * @OA\Get(
+     *      path="/users/details",
+     *      tags={"users"},
+     *      summary="Get user details",
+     *      security={
+     *          {"ApiKey": {}}   
+     *      },
+     *      @OA\Response(
+     *           response=200,
+     *           description="User details"
+     *      )
+     * )
+     */
+    Flight::route('GET /details', function() {
+        Flight::json(Flight::get('patient_service')->get_patient_by_id(Flight::get('user')->id));
+    });
 });
 ?>

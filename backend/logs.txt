@@ -1,0 +1,46 @@
+ErrorException: Attempt to read property "id" on null in C:\xampp\htdocs\WebProgramming\backend\rest\routes\user_routes.php:67
+Stack trace:
+#0 C:\xampp\htdocs\WebProgramming\backend\rest\routes\user_routes.php(67): flight\Engine->handleError(2, 'Attempt to read...', 'C:\\xampp\\htdocs...', 67)
+#1 [internal function]: {closure}()
+#2 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#3 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#4 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Engine.php(544): flight\core\Dispatcher->execute(Object(Closure), Array)
+#5 [internal function]: flight\Engine->_start()
+#6 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(376): call_user_func_array(Array, Array)
+#7 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#8 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#9 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#10 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Engine.php(115): flight\core\Dispatcher->run('start', Array)
+#11 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Flight.php(121): flight\Engine->__call('start', Array)
+#12 C:\xampp\htdocs\WebProgramming\backend\index.php(10): Flight::__callStatic('start', Array)
+#13 {main}
+Error: Call to a member function get_patient_by_id() on null in C:\xampp\htdocs\WebProgramming\backend\rest\routes\user_routes.php:67
+Stack trace:
+#0 [internal function]: {closure}()
+#1 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Engine.php(544): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(376): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Engine.php(115): flight\core\Dispatcher->run('start', Array)
+#10 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Flight.php(121): flight\Engine->__call('start', Array)
+#11 C:\xampp\htdocs\WebProgramming\backend\index.php(10): Flight::__callStatic('start', Array)
+#12 {main}
+Error: Call to a member function get_patient_by_id() on null in C:\xampp\htdocs\WebProgramming\backend\rest\routes\user_routes.php:67
+Stack trace:
+#0 [internal function]: {closure}()
+#1 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(354): call_user_func_array(Object(Closure), Array)
+#2 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Object(Closure), Array)
+#3 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Engine.php(544): flight\core\Dispatcher->execute(Object(Closure), Array)
+#4 [internal function]: flight\Engine->_start()
+#5 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(376): call_user_func_array(Array, Array)
+#6 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(287): flight\core\Dispatcher->invokeCallable(Array, Array)
+#7 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(131): flight\core\Dispatcher->execute(Array, Array)
+#8 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\core\Dispatcher.php(95): flight\core\Dispatcher->runEvent('start', Array)
+#9 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Engine.php(115): flight\core\Dispatcher->run('start', Array)
+#10 C:\xampp\htdocs\WebProgramming\backend\vendor\flightphp\core\flight\Flight.php(121): flight\Engine->__call('start', Array)
+#11 C:\xampp\htdocs\WebProgramming\backend\index.php(10): Flight::__callStatic('start', Array)
+#12 {main}
