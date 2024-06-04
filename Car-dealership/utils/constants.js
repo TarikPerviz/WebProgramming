@@ -1,3 +1,10 @@
+
 var Constants = {
-    API_BASE_URL: 'https://localhost:443/WebProgramming/backend/',
-}
+    get_api_base_url: function () {
+      if(location.hostname == 'localhost'){
+        return "http://localhost/WebProgramming/backend/";
+      } else {
+        return "https://urchin-app-sr3f6.ondigitalocean.app/live-backend/";
+      }
+    }
+  };

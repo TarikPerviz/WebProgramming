@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . "/../../config.php";
+require_once __DIR__ . "/../config.php";
 
 class BaseDao{
 
@@ -49,7 +49,7 @@ class BaseDao{
       foreach ($entity as $column => $value) {
       $query .= $column . ", ";
       }
-      // INSERT INTO patients (first_name, last_name, 
+      // INSERT INTO patients (first_name, 
       $query = substr($query, 0, -2);
       // INSERT INTO patients (first_name, last_name
       $query .= ") VALUES (";
