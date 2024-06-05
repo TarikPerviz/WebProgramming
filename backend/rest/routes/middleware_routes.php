@@ -4,9 +4,7 @@ use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
 Flight::route('/*', function() {
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Authorization');
+   
     if(
         strpos(Flight::request()->url, '/auth/login') === 0 ||
         strpos(Flight::request()->url, '/auth/register') === 0
@@ -30,9 +28,7 @@ Flight::route('/*', function() {
 });
 
 Flight::map('error', function($e){
-    header('Access-Control-Allow-Origin: *');
-    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-    header('Access-Control-Allow-Headers: Content-Type, Authorization');
+
     // We want to log every error that happens
     file_put_contents('logs.txt', $e . PHP_EOL, FILE_APPEND | LOCK_EX);
 
